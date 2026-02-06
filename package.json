@@ -1,0 +1,30 @@
+{
+  "name": "simple-todo-ddd",
+  "version": "1.0.0",
+  "description": "ToDo DDD Learning Project with PostgreSQL",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/presentation/api/server.js",
+    "dev": "ts-node-dev src/presentation/api/server.ts",
+    "learn": "ts-node src/learn-ddd-postgres.ts",
+    "test": "jest"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "pg": "^8.11.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^20.0.0",
+    "@types/pg": "^8.10.2",
+    "@types/uuid": "^9.0.2",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.0.0"
+  }
+}
