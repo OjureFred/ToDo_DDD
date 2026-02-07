@@ -119,7 +119,7 @@ While this is a reference implementation, feel free to:
 
 PRs that improve DDD clarity are welcome!
 📄 License
-MIT © [Your Name]
+MIT © Fredrick Ojure
 
     “The goal of DDD is not complexity—it’s managing complexity through alignment between code and business.”
     — Inspired by Eric Evans
