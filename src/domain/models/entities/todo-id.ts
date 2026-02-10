@@ -1,5 +1,5 @@
 export class TodoId {
-    constructor(private readonly value: string) { }
+    constructor(public readonly value: string) { }
 
     equals(other: TodoId): boolean {
         return this.value === other.value;

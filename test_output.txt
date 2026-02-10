@@ -1,0 +1,59 @@
+FAIL tests/todo.test.ts
+  Todo Aggregate - DDD Concepts
+    Priority Value Object
+      ÔêÜ should create a priority (3 ms)
+      ÔêÜ should throw error for invalid priority (11 ms)
+      ÔêÜ should compare priorities (1 ms)
+    Todo Entity
+      ├ù should have unique value (1 ms)
+    Todo Business Rules
+      ├ù should not allow empty title (15 ms)
+
+  ÔùÅ Todo Aggregate - DDD Concepts ÔÇ║ Todo Entity ÔÇ║ should have unique value
+
+    expect(received).toBeInstanceOf(expected)
+
+    Expected constructor: String
+
+    Received value has no prototype
+    Received value: "todo_1770709758900_t3537n1j9"
+
+      37 |
+      38 |             expect(todo1.id.value).not.toBe(todo2.id.value);
+    > 39 |             expect(todo1.id.value).toBeInstanceOf(String);
+         |                                    ^
+      40 |         })
+      41 |     })
+      42 |
+
+      at Object.<anonymous> (tests/todo.test.ts:39:36)
+
+  ÔùÅ Todo Aggregate - DDD Concepts ÔÇ║ Todo Business Rules ÔÇ║ should not allow empty title
+
+    expect(received).toThrow(expected)
+
+    Expected substring: "Title cannot be empty"
+    Received message:   "TODO must have a title"
+
+          30 |     private validate(): void {
+          31 |         if (!this.title.trim()) {
+        > 32 |             throw new Error('TODO must have a title');
+             |                   ^
+          33 |         }
+          34 |         if (this.title.length > 100) {
+          35 |             throw new Error('Title cannot exceed 100 characters');
+
+      at Todo.validate (src/domain/models/aggregates/todo.ts:32:19)
+      at new Todo (src/domain/models/aggregates/todo.ts:17:14)
+      at Todo.create (src/domain/models/aggregates/todo.ts:95:16)
+      at tests/todo.test.ts:52:22
+      at Object.<anonymous> (node_modules/expect/build/toThrowMatchers.js:74:11)
+      at Object.throwingMatcher [as toThrow] (node_modules/expect/build/index.js:320:21)
+      at Object.<anonymous> (tests/todo.test.ts:53:16)
+      at Object.<anonymous> (tests/todo.test.ts:53:16)
+
+Test Suites: 1 failed, 1 total
+Tests:       2 failed, 3 passed, 5 total
+Snapshots:   0 total
+Time:        2.149 s, estimated 3 s
+Ran all test suites matching /tests\\todo.test.ts/i.

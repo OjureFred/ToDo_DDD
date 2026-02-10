@@ -1,7 +1,7 @@
 export class Priority {
     private static readonly VALID_PRIORITIES = ['LOW', 'MEDIUM', 'HIGH', 'URGENT'] as const;
 
-    constructor(private readonly value: typeof Priority.VALID_PRIORITIES[number]) {
+    constructor(readonly value: typeof Priority.VALID_PRIORITIES[number]) {
         if (!Priority.VALID_PRIORITIES.includes(value)) {
             throw new Error(`Invalid priority value: ${value}`);
         }

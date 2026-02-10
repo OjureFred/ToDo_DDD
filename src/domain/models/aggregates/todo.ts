@@ -17,7 +17,7 @@ export class Todo {
         this.validate();
     }
     //Getters
-    get Id(): TodoId { return this._id; }
+    get id(): TodoId { return this._id; }
     get title(): string { return this._title; }
     get description(): string { return this._description; }
     get priority(): Priority { return this._priority; }
